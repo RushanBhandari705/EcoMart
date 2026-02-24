@@ -1,0 +1,133 @@
+/* =======================
+FOOTER
+======================= */
+
+.footer {
+  background: #292929;
+  color: #e6e6e6;
+  padding: 80px 10% 40px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 60px;
+  margin-bottom: 40px;
+}
+ 
+/* Brand */
+.footer-brand img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Links */
+.footer-links h4,
+.footer-newsletter h4 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  display: block;
+  font-size: 14px;
+  color: #cccccc;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+  color: #8cff8c;
+}
+
+/* Newsletter */
+.footer-newsletter p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #2a7a2a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* =======================
+LEGAL / FAQ SECTION
+======================= */
+
+.footer-legal {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+}
+
+.legal-content {
+  display: none;
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.legal-content.active {
+  display: block;
+}
+
+.legal-content h4 {
+  color: #8cff8c;
+  margin-bottom: 10px;
+}
+
+.legal-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* =======================
+GLOBAL BACKGROUND
+======================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../assets/background.jpg");
+  background-size: 500px 500px;
+  opacity: 0.4;
+  z-index: -1;
+  pointer-events: none;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Signup</title>
+
+  <!-- CSS (Merged) -->
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .auth-container {
+      background: #fff;
+      padding: 25px;
+      width: 330px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .toggle-box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .toggle-box button {
+      width: 48%;
+      padding: 8px;
+      border: none;
+      background: #2563eb;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .auth-form {
+      display: none;
+    }
+
+    .auth-form.active {
+      display: block;
+    }
+
+    .auth-form h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .auth-form input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+
+    .auth-form button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      background: #16a34a;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .auth-text {
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .auth-text a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #2563eb;
+    }
+
+    .message {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+  <!-- TOGGLE -->
+  <div class="toggle-box">
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showSignup()">Sign Up</button>
+  </div>
+
+  <!-- LOGIN FORM -->
+  <form id="loginForm" class="auth-form active">
+    <h2>Login</h2>
+
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+
+    <button type="submit">Login</button>
+
+    <!-- BELOW LOGIN BUTTON -->
+    <p class="auth-text">
+      <a href="#">Forgot Password?</a>
+    </p>
+
+    <p id="loginMessage" class="message"></p>
+  </form>
+
+  <!-- SIGNUP FORM -->
+  <form id="signupForm" class="auth-form">
+    <h2>Sign Up</h2>
+
+    <input type="text" id="signupName" placeholder="Full Name">
+    <input type="email" id="signupEmail" placeholder="Email">
+    <input type="password" id="signupPassword" placeholder="Password">
+
+    <button type="submit">Sign Up</button>
+
+    <p id="signupMessage" class="message"></p>
+  </form>
+
+</div>
+
+<!-- JavaScript (Merged + Validation) -->
+<script>
+  function showLogin() {
+    document.getElementById("loginForm").classList.add("active");
+    document.getElementById("signupForm").classList.remove("active");
+  }
+
+  function showSignup() {
+    document.getElementById("signupForm").classList.add("active");
+    document.getElementById("loginForm").classList.remove("active");
+  }
+
+  // LOGIN VALIDATION
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
+    const message = document.getElementById("loginMessage");
+
+    if (email === "" || password === "") {
+      message.style.color = "red";
+      message.textContent = "All fields are required.";
+      return;
+    }
+
+    if (password.length < 6) {
+      message.style.color = "red";
+      message.textContent = "Password must be at least 6 characters.";
+      return;
+    }
+
+    message.style.color = "green";
+    message.textContent = "Login successful!";
+  });
+
+  // SIGNUP VALIDATION
+  document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("signupName").value.trim();
+    const email = document.getElementById("signupEmail").value.trim();
+    const password = document.getElementById("signupPassword").value.trim();
+    const message = document.getElementById("signupMessage");
+
+    if (name === "" || email === "" || password === "") {
+      message.style.color = "red";
+      message.textContent = "All fields are required.";
+      return;
+    }
+
+    if (password.length < 6) {
+      message.style.color = "red";
+      message.textContent = "Password must be at least 6 characters.";
+      return;
+    }
+
+    message.style.color = "green";
+    message.textContent = "Account created successfully!";
+  });
+</script>
+
+</body>
+</html>

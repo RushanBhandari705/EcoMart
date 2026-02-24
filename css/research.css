@@ -1,0 +1,553 @@
+/* RESET - Keep things consistent across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ===============================
+   NAVBAR - Fixed top bar with blur background
+   =============================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 68px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(3px);
+    z-index: 10;
+}
+
+/* Logo + Search container - aligned horizontally */
+.logo-search {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Logo styling - spacing and font */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #eafbea;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Logo image sizing and slight shift for alignment */
+.logo-img {
+    height: 50px;
+    width: auto;
+    margin-right: -9px;
+}
+
+/* SEARCH BAR */
+/* Container for search input and button */
+.search-container {
+    display: flex;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Input field with no border, transparent background */
+.search-input {
+    border: none;
+    padding: 6px 12px;
+    background: transparent;
+    color: white;
+    font-size: 12px;
+    outline: none;
+    width: 180px;
+}
+
+/* Placeholder color slightly faded for subtlety */
+.search-input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+/* Button with simple grey background and hover effect */
+.search-button {
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    background: #acacac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.search-button:hover {
+    background: #fff6b8;
+}
+
+/* Search icon size and fit */
+.search-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+/* ===============================
+   NAV LINKS - in the navbar
+   =============================== */
+.navbar nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-left: 32px;
+    font-size: 14px;
+    opacity: 0.9;
+    padding-bottom: 6px;
+}
+
+/* Underline effect on hover for nav links */
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.1s ease;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+/* ===============================
+   HERO SECTION - Background video + text overlay
+   =============================== */
+.research-hero {
+    height: calc(100vh - 57px); /* Full viewport height minus navbar */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Video covers entire hero area with slight blur + scale */
+.research-hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px);
+    transform: scale(1.05);
+}
+
+/* Text container centered vertically and horizontally */
+.research-hero-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: none;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    padding: 60px 80px;
+    color: white;
+}
+
+/* Hero heading styling */
+.research-hero-text h1 {
+    font-size: 52px;
+    font-weight: 300;
+}
+
+/* ===============================
+   INTRO TEXT - centered with padding
+   =============================== */
+.research-intro {
+    padding: 120px 20%;
+    text-align: center;
+}
+
+/* ===============================
+   STATS - horizontally aligned numbers
+   =============================== */
+.research-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding-bottom: 120px;
+}
+
+.research-stats h3 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #2a7a2a;
+}
+
+/* ===============================
+   MATERIALS SECTION - horizontally scrollable cards
+   =============================== */
+.materials {
+    padding: 100px 10%;
+}
+
+/* Container for scrollable area */
+.material-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Scrollable flex container for material cards */
+.material-grid {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox hides scrollbar */
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.material-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Each card fixed width, rounded corners */
+.material-card {
+    flex: 0 0 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Images fill card with smooth zoom on hover */
+.material-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Overlay info fades in on hover */
+.material-info {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.material-card:hover img {
+    transform: scale(1.1);
+}
+
+.material-card:hover .material-info {
+    opacity: 1;
+}
+
+/* ===============================
+   TIMELINE SECTION - full width grey bg with content aligned left
+   =============================== */
+.timeline-section {
+    width: 100%;
+    background: #c2c2c2;      /* Soft grey background */
+    padding: 120px 0;
+}
+
+.timeline-content {
+    max-width: 1200px;
+    margin-left: 10%;
+}
+
+.timeline-content h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.timeline-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.timeline-content strong {
+    font-size: 20px;
+}
+
+/* ===============================
+   CALL TO ACTION SECTION - dark bg with white text
+   =============================== */
+.research-cta {
+    padding: 120px;
+    text-align: center;
+    background: #111;
+    color: white;
+}
+
+/* ===============================
+   SALES INSIGHTS - grid layout for images with padding
+   =============================== */
+.sales-insights {
+    padding: 120px 10%;
+    background: #f9fff5;
+    text-align: center;
+}
+
+/* Grid for sales images - responsive columns */
+.sales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.sales-image-box {
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+/* Sales images fill container with smooth zoom on hover */
+.sales-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.sales-image-box:hover img {
+    transform: scale(1.05);
+}
+
+/* ===============================
+   WEBSITE PURPOSE & CREATION SECTIONS
+   =============================== */
+.website-purpose,
+.website-creation {
+    margin-top: 80px;
+}
+
+/* Table Styling - clean, modern */
+.research-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.research-table thead {
+    background-color: #8b6600;
+}
+
+.research-table th {
+    color: #ffffff;
+    font-weight: 600;
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.research-table td {
+    padding: 16px 20px;
+    font-size: 14.5px;
+    color: #333;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.research-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Highlight row on hover for readability */
+.research-table tbody tr:hover {
+    background-color: #ffecbf;
+    transition: background-color 0.3s ease;
+}
+
+/* Inspiration links inside material info */
+.material-info a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.material-info a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .research-table th,
+    .research-table td {
+        font-size: 13px;
+        padding: 12px 14px;
+    }
+}
+
+/* Consistent spacing for website purpose and creation sections */
+.website-purpose h2,
+.website-creation h2 {
+    margin-bottom: 18px;
+}
+
+/* ===============================
+   FOOTER - Dark background with grid layout
+   =============================== */
+.footer {
+    background: #292929;
+    color: #e6e6e6;
+    padding: 80px 10% 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-brand img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.footer-brand h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.footer-links a {
+    display: block;
+    font-size: 14px;
+    color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: #8cff8c;
+}
+
+.footer-newsletter p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-newsletter input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.footer-newsletter button {
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #2a7a2a;
+    color: white;
+    border: none;
+}
+
+/* Bottom footer text */
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* ===============================
+   GLOBAL BACKGROUND OVERLAY - subtle repeated pattern
+   =============================== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../assets/background.jpg");
+    background-repeat: repeat;
+    background-size: 500px 500px; /* Final chosen size for nice density */
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* WEBSITE COMPARISON */
+.comparison-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.comparison-card h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.comparison-images figure {
+    text-align: center;
+}
+
+.comparison-images img {
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.comparison-images figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .comparison-images {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alson Basnet | Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    /* ================= HEADER ================= */
+    .header {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2rem;
+      background: var(--card);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      align-items: center;
+    }
+
+    /*  FIXED PROFILE IMAGE */
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top; /* keeps head visible */
+      border: 4px solid var(--primary);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+      background: var(--card);
+      margin-top: 2rem;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: var(--primary);
+      border-bottom: 3px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .skill {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 10px;
+      padding: 0.9rem 0.4rem;
+      text-align: center;
+      font-size: 1.6rem;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .skill:hover {
+      transform: translateY(-6px) scale(1.05);
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .skill::after {
+      content: attr(data-name);
+      position: absolute;
+      bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f172a;
+      color: white;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      border-radius: 6px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .skill:hover::after { opacity: 1; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1rem;
+      background: var(--card);
+      border-radius: var(--radius);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .social-links { justify-content: center; }
+    }
+  </style>
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <!-- Simplified profile image -->
+      <img src="../assets/alson.jpg" 
+           alt="Alson Basnet" 
+           style="width:200px; height:200px; border-radius:50%;">
+
+      <div>
+        <h1>Alson Basnet</h1>
+        <p> Aspiring Computer Programmer</p>
+        <div class="contact">
+          <p>Location: Ramdhuni-4, Nepal</p>
+          <p>Phone: +977-9762917833</p>
+          <p>Email: basnetalson14@gmail.com</p>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="social-links">
+          <a href="https://www.facebook.com/Soytoxico69?share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17wnsZ31p7%2F#" target="_blank" rel="noopener">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/vintage_alson/" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/alson-basnet-a54654354/" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+          <a href="https://github.com/AlsonBasnet7" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Career Objective -->
+    <section>
+      <h2>Career Objective</h2>
+      <p>
+        Eager to pursue a <strong>Bsc(Hons) Computing</strong> at Ithari International College, with a strong passion for technology and programming. Aiming to build solid skills in software development, problem-solving, and real-world application development, and to grow into a proficient and innovative computer programmer.
+      </p>
+    </section>
+
+    <!-- About Me -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Enthusiastic Python learner with a strong interest in <strong>Artificial Intelligence</strong> and <strong>Data Science</strong>. I enjoy exploring how data, algorithms, and intelligent systems can be used to solve real-world problems. With a curious mindset and commitment to continuous learning, actively building skills in Python programming, data analysis, and foundational AI concepts.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2>Work Experience</h2>
+      <h3>IT Support Staff – Quantum IT Solutions Pvt. Ltd.</h3>
+      <p><em>April 2023 – 2024</em></p>
+      <ul>
+        <li>Troubleshoot hardware and software issues</li>
+        <li>Manage IT infrastructure and networks</li>
+        <li>Install, configure, and update systems</li>
+        <li>Monitor system performance and security</li>
+        <li>Maintain IT documentation and asset records</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill" data-name="Python"><i class="fab fa-python"></i></div>
+        <div class="skill" data-name="Java"><i class="fab fa-java"></i></div>
+        <div class="skill" data-name="SQL"><i class="fas fa-database"></i></div>
+        <div class="skill" data-name="HTML"><i class="fab fa-html5"></i></div>
+        <div class="skill" data-name="CSS"><i class="fab fa-css3-alt"></i></div>
+        <div class="skill" data-name="JavaScript"><i class="fab fa-js-square"></i></div>
+        <div class="skill" data-name="Web Design"><i class="fas fa-paint-brush"></i></div>
+        <div class="skill" data-name="IT Support"><i class="fas fa-headset"></i></div>
+        <div class="skill" data-name="Photoshop"><i class="fab fa-adobe"></i></div>
+        <div class="skill" data-name="Email"><i class="fas fa-envelope"></i></div>
+      </div>
+    </section>
+
+    <!-- Education & Training -->
+    <section class="grid-2">
+      <div>
+        <h2>Education</h2>
+        <p><strong>Bachelor of Information Technology (BIT)</strong><br />Itahari International College<br /><em>Currently Studying</em></p>
+        <p><strong>10+2 Science</strong><br />Lord Buddha International Secondary School<br /><em>2021 – 2023</em></p>
+        <p><strong>SLC</strong><br />Lord Buddha International School<br /><em>Passed: 2021</em></p>
+      </div>
+      <div>
+        <h2>Training</h2>
+        <p>
+          Workshop on HTML, CSS & E-Commerce<br />
+          <strong>Spark Technology Pvt. Ltd.</strong><br />
+          <em>Nov 2023 – Mar 2024</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- References -->
+    <section>
+      <h2>References</h2>
+      <p><strong>Academic:</strong> Mr. Arjun Prasad Neupane – Principal</p>
+      <p><strong>Professional:</strong> Mr. Krishna Bista – Director, Spark Technology Pvt. Ltd.</p>
+    </section>
+
+    <!-- Contact Me -->
+    <section>
+      <h2>Contact Me</h2>
+      <p>If you'd like to connect, collaborate, or discuss opportunities, feel free to reach out.</p>
+      <ul>
+        <li>Email: <strong>basnetalson14@gmail.com</strong></li>
+        <li>Phone: <strong>+977-9762917833</strong></li>
+        <li>Location: <strong>Ramdhuni-4, Nepal</strong></li>
+      </ul>
+    </section>
+
+    <footer>
+      © 2025 Alson Basnet | Portfolio Website | 
+    </footer>
+
+  </div>
+
+</body>
+</html>

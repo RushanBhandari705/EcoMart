@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #e6e6e6;
+}
+
+/* CV CONTAINER */
+.cv {
+    width: 900px;
+    margin: 30px auto;
+    background: #f2f2f2;
+    padding: 40px;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #666;
+}
+
+.header h1 {
+    font-size: 48px;
+    letter-spacing: 8px;
+}
+
+/* CONTENT GRID */
+.content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 30px;
+}
+
+/* LEFT COLUMN */
+.left {
+    position: relative;
+}
+
+/* PHOTO */
+.photo {
+    width: 100%;
+    height: 320px;
+    border: 2px dashed #999;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background: #e0e0e0;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXT LEFT */
+.name-big {
+    font-size: 70px;
+    opacity: 0.15;
+}
+
+.signature {
+    font-family: cursive;
+    color: #c0392b;
+    font-size: 30px;
+    margin: -20px 0 6px;
+}
+
+.name {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.role {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* RIGHT COLUMN */
+.right section {
+    margin-bottom: 25px;
+}
+
+.right h4 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.year {
+    color: #c0392b;
+    font-weight: bold;
+    min-width: 50px;
+}
+
+.item p {
+    font-size: 13px;
+}
+
+.item small {
+    color: #666;
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skills div {
+    background: #ddd;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.skills span {
+    display: block;
+    color: #c0392b;
+    font-size: 12px;
+}
+.skills .skill-1 {
+    background: #f39c12;
+    color: #fff;
+}
+.skills .skill-2 {
+    background: #27ae60;
+    color: #fff;
+}
+.skills .skill-3 {
+    background: #2980b9;
+    color: #fff;
+}
+.skills .skill-4 {
+    background: #8e44ad;
+    color: #fff;
+}
+.skills .skill-5 {
+    background: #d35400;
+    color: #fff;
+}
+
+/* CONTACT */
+.contact p {
+    font-size: 13px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #c0392b;
+    text-decoration: none;
+    font-weight: bold;
+    word-break: break-all;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}

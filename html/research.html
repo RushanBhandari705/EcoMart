@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>EcoMart | Research</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet" />
+
+    <!-- External CSS -->
+    <!--Page-specific styling for research page-->
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/research.css" />
+    <script src="../js/research.js" defer></script>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        /* Highlight the active nav link */
+        .navbar nav a.active {
+            font-weight: 600;
+            border-bottom: 2px solid white;
+        }
+
+        /* Improve readability of intro paragraphs */
+        .research-intro p {
+            line-height: 1.8;
+        }
+
+        /* Slight letter spacing for stat numbers */
+        .research-stats h3 {
+            letter-spacing: 1px;
+        }
+
+        /* Center hero text on larger screens */
+        .research-hero-text {
+            text-align: center;
+        }
+    </style>
+
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo-search">
+
+        <!-- LOGO SECTION -->
+        <div class="logo">
+            <img src="../assets/logo.png" alt="EcoMart Logo" class="logo-img" />
+            <span>EcoMart</span>
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION LINKS -->
+    <nav>
+        <a href="HomePage.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+        <!-- Active page highlighted -->
+        <a href="research.html" class="active" style="opacity: 1;">
+            Research
+        </a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="research-hero">
+    <!--Video background for visual impact-->
+    <video autoplay muted loop playsinline>
+        <source src="../assets/researchvideo.mp4" type="video/mp4" />
+    </video>
+<!--Hero text overlay-->
+    <div class="research-hero-text">
+        <!-- INLINE STYLE added for letter spacing on heading -->
+        <h1 style="letter-spacing: 2px;">
+            Research for a Greener Tomorrow
+        </h1>
+        <p>Exploring materials, processes, and innovations shaping sustainable living.</p>
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="research-intro">
+    <h2>Our Research Philosophy</h2>
+    <p>
+        Every EcoMart product starts with in-depth research. We scrutinize materials, lifecycle impacts, and environmental performance to create sustainable, long-lasting solutions that reduce waste and carbon footprints from cradle to grave.
+        Our designs blend innovation with durability, using renewable resources like bamboo and recycled fabrics. Rigorous testing ensures top performance, backed by transparency and a lifetime sustainability guarantee, so you can trust products that protect the planet as much as they serve you.
+    </p>
+</section>
+
+<!-- STATS -->
+<section class="research-stats">
+    <div class="stat-card">
+        <h3 data-count="120">0</h3>
+        <span>Material Tests</span>
+    </div>
+    <div class="stat-card">
+        <h3 data-count="38">0</h3>
+        <span>Eco Studies</span>
+    </div>
+    <div class="stat-card">
+        <h3 data-count="12">0</h3>
+        <span>Research Partners</span>
+    </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="materials">
+    <h2>Material Exploration</h2>
+
+    <div class="material-container">
+        <div class="material-grid" id="materialGrid">
+            <div class="material-card">
+                <img src="../assets/baas.jpg" alt="Bamboo" />
+                <div class="material-info">
+                    <h3>Bamboo Fiber</h3>
+                    <p>Rapid growth, biodegradable, extremely durable.</p>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="../assets/linen.jpg" alt="Linen" />
+                <div class="material-info">
+                    <h3>Organic Linen</h3>
+                    <p>Low water usage and naturally antibacterial.</p>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="../assets/glass.jpg" alt="Glass" />
+                <div class="material-info">
+                    <h3>Recycled Glass</h3>
+                    <p>Infinitely reusable with zero microplastics.</p>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="../assets/paper.jpg" alt="Paper" />
+                <div class="material-info">
+                    <h3>Recycled Paper</h3>
+                    <p>Sustainably sourced and easily recyclable.</p>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="../assets/wood.jpg" alt="Wood" />
+                <div class="material-info">
+                    <h3>Certified Wood</h3>
+                    <p>From responsibly managed forests.</p>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="../assets/plastic.jpg" alt="Recycled Plastic" />
+                <div class="material-info">
+                    <h3>Recycled Plastic</h3>
+                    <p>Transforms waste into reusable materials.</p>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="../assets/cotton.jpg" alt="Organic Cotton" />
+                <div class="material-info">
+                    <h3>Organic Cotton</h3>
+                    <p>Soft, sustainable, and pesticide-free.</p>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="../assets/jute.jpg" alt="Jute" />
+                <div class="material-info">
+                    <h3>Jute</h3>
+                    <p>A strong, biodegradable fiber used for sacks, bags, and eco-friendly textiles.</p>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <img src="../assets/clay.jpg" alt="Clay" />
+                <div class="material-info">
+                    <h3>Clay</h3>
+                    <p>Natural, abundant material used in pottery and sustainable construction.</p>
+                </div>
+                <!--Additional materials cards-->
+            </div>
+        </div>
+    </div>
+</section>
+<!--PACKAGING RESEARCH-->
+<section class="research-intro">
+    <h2>Packaging Research</h2>
+    <p>
+        EcoMart conducts rigorous research into sustainable packaging solutions aimed at reducing and eliminating
+        single-use plastics. Our research evaluates recycled paper, compostable materials, and reusable packaging
+        systems through comparative testing to ensure product safety and environmental responsibility.
+        Each packaging option is assessed for durability, moisture resistance, shelf stability, and end-of-life
+        recyclability, ensuring high performance while maintaining strict sustainability standards.
+    </p>
+</section>
+<!--ENVIRONMENTAL IMPACT-->
+
+<section class="research-intro">
+    <h2>Sustainability & Environmental Impact</h2>
+    <p>
+        At EcoMart, we prioritize sustainability by conducting comprehensive lifecycle assessments of our products.
+        Our research focuses on minimizing carbon footprints, reducing water usage, and promoting circular economy
+        principles. We analyze raw material sourcing, manufacturing processes, transportation emissions, and end-of-life
+        disposal methods to ensure our products contribute positively to environmental conservation.
+        Through continuous innovation and collaboration with sustainability experts, we strive to set new standards
+        for eco-friendly consumer goods.
+    </p>
+</section>
+<!--RESEARCH METHODOLOGY-->
+
+<section class="research-intro">
+    <h2>Research Methodology</h2>
+    <p>
+        EcoMart employs a rigorous research methodology combining qualitative and quantitative approaches to
+        evaluate the sustainability of our products. Our process includes material analysis, lifecycle assessments,
+        and user testing to gather comprehensive data on environmental impact and performance.
+        We collaborate with academic institutions and industry experts to ensure our research adheres to the highest
+        standards of scientific integrity. This evidence-based approach allows us to make informed decisions that
+        align with our commitment to sustainability and innovation.
+    </p>
+</section>
+<!--FUTURE RESEARCH GOALS-->
+
+<section class="research-intro">
+    <h2>Future Research Goals</h2>
+    <p>
+        Looking ahead, EcoMart is committed to advancing our research efforts to further enhance the sustainability
+        of our products. Our future goals include exploring cutting-edge biodegradable materials, optimizing supply
+        chain logistics to reduce carbon emissions, and developing innovative recycling programs to promote circularity.
+        We aim to deepen our partnerships with environmental organizations and invest in technologies that support
+        sustainable manufacturing practices. Through these initiatives, we strive to lead the industry in eco-friendly
+        innovation and make a lasting positive impact on the planet.
+    </p>
+</section>
+
+<!-- SALES INSIGHTS -->
+<section class="sales-insights" style="border-top: 4px solid #2a7a2a;">
+    <h2>Sales Impact & Market Reach</h2>
+    <p class="sales-subtitle">
+        An overview of how our eco-friendly products perform across regions and time.
+    </p>
+
+    <div class="sales-grid">
+        <div class="sales-image-box">
+            <img src="../assets/monthlybar.jpg" alt="Monthly Sales Graph">
+        </div>
+
+        <div class="sales-image-box">
+            <img src="../assets/salesbyregion.png" alt="Sales by Region Map">
+        </div>
+
+        <div class="sales-image-box">
+            <img src="../assets/bar graph.jpg" alt="Annual Sales Growth Bar Graph">
+        </div>
+    </div>
+</section>
+
+<!-- WEBSITE PURPOSE & CREATION -->
+<section class="research-intro website-purpose">
+    <h2>Why EcoMart Was Created</h2>
+    <p>
+        EcoMart was created as a research-driven platform to demonstrate how sustainability, design,
+        and technology can work together to promote environmentally responsible consumer choices.
+        The website serves as an educational and informational hub, highlighting eco-friendly
+        materials, ethical production methods, and the real-world impact of sustainable products.
+        Its purpose is not only to showcase products, but also to communicate transparency,
+        research integrity, and long-term environmental commitment.
+    </p>
+</section>
+
+<section class="materials website-creation">
+    <h2>How This Website Was Made</h2>
+
+    <div class="material-container">
+        <table class="research-table">
+            <thead>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Implementation</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Frontend Structure</td>
+                    <td>HTML5 & Semantic Sections</td>
+                    <td>Clear content hierarchy and accessibility</td>
+                </tr>
+                <tr>
+                    <td>Styling</td>
+                    <td>Custom CSS & Google Fonts</td>
+                    <td>Modern, clean, eco-inspired visual identity</td>
+                </tr>
+                <tr>
+                    <td>Interactivity</td>
+                    <td>Vanilla JavaScript</td>
+                    <td>Dynamic search placeholders and animations</td>
+                </tr>
+                <tr>
+                    <td>Media</td>
+                    <td>Optimized Images & Background Video</td>
+                    <td>Visual storytelling and engagement</td>
+                </tr>
+                <tr>
+                    <td>Design Approach</td>
+                    <td>Research-focused UI</td>
+                    <td>Align content with sustainability values</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+<!--RESEARCH INSPIRATION-->
+
+<section class="research-intro">
+    <h2>Our Research Philosophy & Design Inspiration</h2>
+    <p>
+        EcoMart’s research approach is built upon established sustainability frameworks and inspired by
+        globally recognized environmental organizations and ethical brands. Our goal was to combine
+        academic research principles with modern digital design to create a platform that communicates
+        sustainability clearly, transparently, and visually.
+        Every section of this website reflects research-backed decisions in materials, lifecycle impact,
+        and user experience, ensuring that information is both trustworthy and accessible.
+    </p>
+</section>
+
+<section class="materials">
+    <h2>Research & Design Inspiration Sources</h2>
+
+    <div class="material-container">
+        <table class="research-table">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Inspired Features</th>
+                    <th>How It Was Used in EcoMart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://www.patagonia.com" target="_blank">Patagonia</a>
+                    </td>
+                    <td>Transparency, sustainability storytelling</td>
+                    <td>
+                        Influenced the research-driven content structure and the focus on material
+                        lifecycle explanations across the website.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="https://www.worldwildlife.org" target="_blank">World Wildlife Fund (WWF)</a>
+                    </td>
+                    <td>Environmental impact reporting</td>
+                    <td>
+                        Motivated the inclusion of environmental impact sections, research statistics,
+                        and data-focused sustainability insights.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="https://www.unep.org" target="_blank">UN Environment Programme (UNEP)</a>
+                    </td>
+                    <td>Research methodology & policy alignment</td>
+                    <td>
+                        Inspired the structured research methodology, lifecycle analysis approach,
+                        and future sustainability goals.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="https://www.apple.com/environment/" target="_blank">Apple Environment</a>
+                    </td>
+                    <td>Minimalist UI & clarity</td>
+                    <td>
+                        Influenced the clean layout, simple navigation, visual hierarchy, and
+                        minimalistic design language used throughout the site.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="https://www.nike.com/sustainability" target="_blank">Nike Sustainability</a>
+                    </td>
+                    <td>Innovation-driven sustainability</td>
+                    <td>
+                        Encouraged the integration of innovation-focused research goals and
+                        forward-looking sustainability timelines.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+<!-- VISUAL WEBSITE COMPARISON -->
+<section class="research-intro website-comparison">
+    <h2>Visual Website Comparison</h2>
+    <p>
+        Below are side-by-side comparisons of EcoMart with other leading sustainability-focused websites.
+        These comparisons highlight how EcoMart integrates research-driven content, eco-friendly design,
+        and user experience to create a unique platform dedicated to promoting sustainable living.
+    </p>
+</section>
+
+<section class="materials">
+    <div class="material-container comparison-grid">
+
+        <!-- COMPARISON CARD -->
+        <div class="comparison-card">
+            <h3>EcoMart vs Patagonia</h3>
+            <div class="comparison-images">
+                <figure>
+                    <img src="../assets/front page.png" alt="EcoMart Website Screenshot">
+                    <figcaption>EcoMart – Research-focused layout</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../assets/patagonia.png" alt="Patagonia Website Screenshot">
+                    <figcaption>Patagonia – Transparency & storytelling</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- COMPARISON CARD -->
+        <div class="comparison-card">
+            <h3>EcoMart vs WWF</h3>
+            <div class="comparison-images">
+                <figure>
+                    <img src="../assets/research.png" alt="EcoMart Research Page">
+                    <figcaption>EcoMart – Data-driven research sections</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../assets/wwf.png" alt="WWF Website Screenshot">
+                    <figcaption>WWF – Environmental impact reporting</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- COMPARISON CARD -->
+        <div class="comparison-card">
+            <h3>EcoMart vs Apple Environment</h3>
+            <div class="comparison-images">
+                <figure>
+                    <img src="../assets/applejastai.png" alt="EcoMart UI Design">
+                    <figcaption>EcoMart – Minimalist, eco-inspired UI</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../assets/apple.png" alt="Apple Environment Website">
+                    <figcaption>Apple – Clean and minimalist layout</figcaption>
+                </figure>
+            </div>
+        </div>
+
+                <!-- COMPARISON CARD -->
+        <div class="comparison-card">
+            <h3>EcoMart vs Nike</h3>
+            <div class="comparison-images">
+                <figure>
+                    <img src="../assets/blog_reference.png" alt="EcoMart UI Design">
+                    <figcaption>EcoMart – Minimalist, eco-inspired UI</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="../assets/nike.png" alt="Nike Website">
+                    <figcaption>Nike – clean and attractive ui/ux</figcaption>
+                </figure>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- RESEARCH TIMELINE -->
+<section class="timeline-section">
+    <div class="timeline-content">
+        <h2>Research Timeline</h2>
+
+        <p><strong>2021</strong><br>Lifecycle material research initiated</p>
+        <p><strong>2023</strong><br>Zero-plastic packaging validation</p>
+        <p><strong>2025</strong><br>Carbon-neutral supply chain testing</p>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <img src="../assets/logo.png" alt="EcoMart Logo">
+      <h3>EcoMart</h3>
+      <p>Eco-friendly essentials for a sustainable tomorrow.</p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="HomePage.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="#" class="footer-toggle" data-target="contact">Contact Us</a>
+      <a href="#" class="footer-toggle" data-target="faq">FAQs</a>
+      <a href="#" class="footer-toggle" data-target="privacy">Privacy Policy</a>
+      <a href="#" class="footer-toggle" data-target="terms">Terms & Conditions</a>
+      <a href="#" class="footer-toggle" data-target="reach">Reach Us</a>
+
+    </div>
+
+  </div>
+
+  <!-- LEGAL / CONTACT CONTENT -->
+  <div class="footer-legal">
+
+    <!-- CONTACT -->
+    <div class="legal-content" id="contact">
+      <h4>Contact Us</h4>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <small class="error"></small>
+
+        <input type="email" id="email" placeholder="Your Email">
+        <small class="error"></small>
+
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <small class="error"></small>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- FAQ -->
+    <div class="legal-content" id="faq">
+      <h4>FAQs</h4>
+      <p><strong>What is EcoMart?</strong><br>EcoMart offers eco-friendly daily essentials.</p>
+      <p><strong>Is EcoMart sustainable?</strong><br>Yes, sustainability is our core mission.</p>
+      <p><strong>Is EcoMart free to use?</strong><br>Yes, browsing and learning are free.</p>
+    </div>
+
+    <!-- PRIVACY -->
+    <div class="legal-content" id="privacy">
+      <h4>Privacy Policy</h4>
+      <p>
+        We respect your privacy. Personal data is used only to improve services.
+        We never sell or misuse user information.
+      </p>
+    </div>
+
+    <!-- TERMS -->
+    <div class="legal-content" id="terms">
+      <h4>Terms & Conditions</h4>
+      <p>
+        By using EcoMart, you agree to follow our terms. Content is for
+        informational purposes only.
+      </p>
+    </div>
+    <!-- REACH US -->
+<div class="legal-content" id="reach">
+  <h4>Reach Us</h4>
+
+  <p><strong>Itahari International College (IIC)</strong></p>
+  <p>Location: Dulari, Morang, Koshi Province, Nepal</p>
+  <p>Phone: +977-9869696969</p>
+  <p>Mail: info@iic.edu.np</p>
+
+  <div class="map-box">
+    <iframe
+      src="https://www.google.com/maps?q=26.6554085,87.3019478&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 EcoMart. All rights reserved.</p>
+  </div>
+
+</footer>
+
+<!-- FOOTER CSS -->
+<style>
+  .footer {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 40px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+
+  .footer-brand img {
+    max-width: 120px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 6px 0;
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: #4caf50;
+  }
+
+  .footer-legal {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+  }
+
+  .legal-content {
+    display: none;
+  }
+
+  .legal-content.active {
+    display: block;
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  #contactForm button {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+</style>
+
+<!-- FOOTER SCRIPT -->
+<script>
+  const toggles = document.querySelectorAll(".footer-toggle");
+  const contents = document.querySelectorAll(".legal-content");
+
+  toggles.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = link.dataset.target;
+
+      contents.forEach(section => {
+        section.classList.remove("active");
+        if (section.id === target) {
+          section.classList.add("active");
+        }
+      });
+    });
+  });
+
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let valid = true;
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    const errors = document.querySelectorAll(".error");
+    errors.forEach(err => err.textContent = "");
+
+    if (name.value.trim() === "") {
+      name.nextElementSibling.textContent = "Name is required";
+      valid = false;
+    }
+
+    if (email.value.trim() === "") {
+      email.nextElementSibling.textContent = "Email is required";
+      valid = false;
+    } else if (!email.value.includes("@")) {
+      email.nextElementSibling.textContent = "Invalid email format";
+      valid = false;
+    }
+
+    if (message.value.trim() === "") {
+      message.nextElementSibling.textContent = "Message cannot be empty";
+      valid = false;
+    }
+
+    if (valid) {
+      alert("Message sent successfully!");
+      form.reset();
+    }
+  });
+</script>
+
+
+</body>
+</html>

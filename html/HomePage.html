@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EcoMart</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/navbar.css">
+<script src="../js/navbar-search.js" defer></script>
+
+<style>
+/* ================= LOGIN/SIGNUP MODAL ================= */
+.auth-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-box {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 350px;
+  max-width: 90%;
+  position: relative;
+  display: none;
+  flex-direction: column;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background: #45a049;
+}
+
+.close-auth {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.auth-switch span {
+  color: #4CAF50;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+</style>
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo-search">
+    <div class="logo">
+      <img src="../assets/logo.png" alt="EcoMart Logo" class="logo-img">
+      <span>EcoMart</span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="HomePage.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="blog.html">Blog</a>
+    <a href="research.html">Research</a>
+    <a href="about.html">About</a>
+    <a href="products.html" class="cart-link" id="cartIcon">🛒 Cart (<span id="cartBadge">0</span>)</a>
+    <!-- LOGIN ICON -->
+    <a href="javascript:void(0)" class="login-link" onclick="openAuthModal()">
+      <img src="../assets/login.png" alt="Login" class="login-icon">
+    </a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="../assets/vecteezy_bamboo-utensils-and-a-bottle-of-water-on-a-table_75266235.mp4" type="video/mp4">
+  </video>
+  <div class="hero-text">
+    <h1>Naturally Better Choices.</h1>
+    <p>Eco-friendly essentials for a sustainable tomorrow</p>
+  </div>
+</section>
+
+<!-- ================= FEATURED ================= -->
+<section class="featured">
+  <h2>Fresh Eco Picks</h2>
+  <p class="featured-sub">Hand-picked sustainable essentials you’ll love</p>
+  <div class="featured-grid">
+    <a href="products.html" class="featured-card">
+      <img src="../assets/tooth.jpg">
+      <h3>Bamboo Toothbrush</h3>
+      <span>Plastic-free • Biodegradable</span>
+    </a>
+    <a href="products.html" class="featured-card">
+      <img src="../assets/bottle.jpg">
+      <h3>Reusable Bottle</h3>
+      <span>Stainless Steel • BPA-free</span>
+    </a>
+    <a href="products.html" class="featured-card">
+      <img src="../assets/bagg.jpg">
+      <h3>Eco Shopping Bag</h3>
+      <span>Reusable • Lightweight</span>
+    </a>
+    <a href="products.html" class="featured-card">
+      <img src="../assets/soap.jpg">
+      <h3>Organic Soap</h3>
+      <span>Natural • Skin-friendly</span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+ <!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <img src="../assets/logo.png" alt="EcoMart Logo">
+      <h3>EcoMart</h3>
+      <p>Eco-friendly essentials for a sustainable tomorrow.</p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="HomePage.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+    </div>
+
+    <!-- SUPPORT -->
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="#" class="footer-toggle" data-target="contact">Contact Us</a>
+      <a href="#" class="footer-toggle" data-target="faq">FAQs</a>
+      <a href="#" class="footer-toggle" data-target="privacy">Privacy Policy</a>
+      <a href="#" class="footer-toggle" data-target="terms">Terms & Conditions</a>
+      <a href="#" class="footer-toggle" data-target="reach">Reach Us</a>
+
+    </div>
+
+  </div>
+
+  <!-- LEGAL / CONTACT CONTENT -->
+  <div class="footer-legal">
+
+    <!-- CONTACT -->
+    <div class="legal-content" id="contact">
+      <h4>Contact Us</h4>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <small class="error"></small>
+
+        <input type="email" id="email" placeholder="Your Email">
+        <small class="error"></small>
+
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <small class="error"></small>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- FAQ -->
+    <div class="legal-content" id="faq">
+      <h4>FAQs</h4>
+      <p><strong>What is EcoMart?</strong><br>EcoMart offers eco-friendly daily essentials.</p>
+      <p><strong>Is EcoMart sustainable?</strong><br>Yes, sustainability is our core mission.</p>
+      <p><strong>Is EcoMart free to use?</strong><br>Yes, browsing and learning are free.</p>
+    </div>
+
+    <!-- PRIVACY -->
+    <div class="legal-content" id="privacy">
+      <h4>Privacy Policy</h4>
+      <p>
+        We respect your privacy. Personal data is used only to improve services.
+        We never sell or misuse user information.
+      </p>
+    </div>
+
+    <!-- TERMS -->
+    <div class="legal-content" id="terms">
+      <h4>Terms & Conditions</h4>
+      <p>
+        By using EcoMart, you agree to follow our terms. Content is for
+        informational purposes only.
+      </p>
+    </div>
+    <!-- REACH US -->
+<div class="legal-content" id="reach">
+  <h4>Reach Us</h4>
+
+  <p><strong>Itahari International College (IIC)</strong></p>
+  <p>Location: Dulari, Morang, Koshi Province, Nepal</p>
+  <p>Phone: +977-9869696969</p>
+  <p>Mail: info@iic.edu.np</p>
+
+  <div class="map-box">
+    <iframe
+      src="https://www.google.com/maps?q=26.6554085,87.3019478&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 EcoMart. All rights reserved.</p>
+  </div>
+
+</footer>
+
+<!-- FOOTER CSS -->
+<style>
+  .footer {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 40px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+
+  .footer-brand img {
+    max-width: 120px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 6px 0;
+    color: #ccc;
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: #4caf50;
+  }
+
+  .footer-legal {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+  }
+
+  .legal-content {
+    display: none;
+  }
+
+  .legal-content.active {
+    display: block;
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  #contactForm button {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+</style>
+
+<!-- FOOTER SCRIPT -->
+<script>
+  const toggles = document.querySelectorAll(".footer-toggle");
+  const contents = document.querySelectorAll(".legal-content");
+
+  toggles.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = link.dataset.target;
+
+      contents.forEach(section => {
+        section.classList.remove("active");
+        if (section.id === target) {
+          section.classList.add("active");
+        }
+      });
+    });
+  });
+
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let valid = true;
+
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    const errors = document.querySelectorAll(".error");
+    errors.forEach(err => err.textContent = "");
+
+    if (name.value.trim() === "") {
+      name.nextElementSibling.textContent = "Name is required";
+      valid = false;
+    }
+
+    if (email.value.trim() === "") {
+      email.nextElementSibling.textContent = "Email is required";
+      valid = false;
+    } else if (!email.value.includes("@")) {
+      email.nextElementSibling.textContent = "Invalid email format";
+      valid = false;
+    }
+
+    if (message.value.trim() === "") {
+      message.nextElementSibling.textContent = "Message cannot be empty";
+      valid = false;
+    }
+
+    if (valid) {
+      alert("Message sent successfully!");
+      form.reset();
+    }
+  });
+</script>
+</footer>
+
+<!-- ================= LOGIN/SIGNUP MODAL ================= -->
+<div class="auth-modal" id="authModal">
+  <!-- LOGIN BOX -->
+  <div class="auth-box" id="loginBox">
+    <span class="close-auth" onclick="closeAuthModal()">✖</span>
+    <h2>Welcome to EcoMart</h2>
+    <input type="email" placeholder="Email" id="loginEmail">
+    <input type="password" placeholder="Password" id="loginPassword">
+    <button onclick="loginUser()">Login</button>
+    <p id="loginMessage" class="message"></p>
+    <div class="auth-switch">Don’t have an account? <span onclick="showSignup()">Sign Up</span></div>
+  </div>
+
+  <!-- SIGNUP BOX -->
+  <div class="auth-box" id="signupBox">
+    <span class="close-auth" onclick="closeAuthModal()">✖</span>
+    <h2>Create Account</h2>
+    <input type="text" placeholder="Full Name" id="signupName">
+    <input type="email" placeholder="Email" id="signupEmail">
+    <input type="password" placeholder="Password" id="signupPassword">
+    <button onclick="signupUser()">Sign Up</button>
+    <p id="signupMessage" class="message"></p>
+    <div class="auth-switch">Already have an account? <span onclick="showLogin()">Login</span></div>
+  </div>
+</div>
+
+<!-- ================= LOGIN/SIGNUP SCRIPT ================= -->
+<script>
+// OPEN / CLOSE MODAL
+function openAuthModal() {
+  document.getElementById("authModal").style.display = "flex";
+  showLogin(); // default to login
+}
+function closeAuthModal() {
+  document.getElementById("authModal").style.display = "none";
+}
+
+// TOGGLE LOGIN / SIGNUP
+function showLogin() {
+  document.getElementById("loginBox").style.display = "flex";
+  document.getElementById("signupBox").style.display = "none";
+}
+function showSignup() {
+  document.getElementById("signupBox").style.display = "flex";
+  document.getElementById("loginBox").style.display = "none";
+}
+
+// LOGIN VALIDATION
+function loginUser() {
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value.trim();
+  const message = document.getElementById("loginMessage");
+  if(!email || !password){
+    message.style.color = "red"; message.textContent = "All fields are required!";
+    return;
+  }
+  if(password.length < 6){
+    message.style.color = "red"; message.textContent = "Password must be at least 6 characters";
+    return;
+  }
+  message.style.color = "green"; message.textContent = "Login successful!";
+}
+
+// SIGNUP VALIDATION
+function signupUser() {
+  const name = document.getElementById("signupName").value.trim();
+  const email = document.getElementById("signupEmail").value.trim();
+  const password = document.getElementById("signupPassword").value.trim();
+  const message = document.getElementById("signupMessage");
+  if(!name || !email || !password){
+    message.style.color = "red"; message.textContent = "All fields are required!";
+    return;
+  }
+  if(password.length < 6){
+    message.style.color = "red"; message.textContent = "Password must be at least 6 characters";
+    return;
+  }
+  message.style.color = "green"; message.textContent = "Account created successfully!";
+}
+</script>
+
+</body>
+</html>
